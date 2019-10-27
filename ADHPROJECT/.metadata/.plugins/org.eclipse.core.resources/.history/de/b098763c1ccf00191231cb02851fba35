@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" version="2.0">
+    <jsp:directive.page language="java"
+        contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" />
+    <jsp:text>
+        <![CDATA[ <?xml version="1.0" encoding="ISO-8859-1" ?> ]]>
+    </jsp:text>
+    <jsp:text>
+        <![CDATA[ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> ]]>
+    </jsp:text>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+</head>
+<body>
+<f:view>
+
+
+
+ <%
+    try
+    {
+        Class.forName("com.mysql.jdbc.Driver");
+        Connection con=(Connection)DriverManager.getConnection(
+            "jdbc:mysql://localhost:3306/employee","root","Deli@123");
+        Statement st=con.createStatement();
+        ResultSet rs=st.executeQuery("select * from employees;");
+    %><table border=1 align=center style="text-align:center">
+      <thead>
+          <tr>
+             <th>name</th>
+             <th>SurName</th>
+             <th>dateOfBirth</th>
+             
+          </tr>
+      </thead>
+      <tbody>
+        <%while(rs.next())
+        {
+            %>
+            <tr>
+                <td><%=rs.getString("name") %></td>
+                <td><%=rs.getString("SurName") %></td>
+                <td><%=rs.getString("dateOfBirth") %></td>
+               
+            </tr>
+            <%}%>
+           </tbody>
+        </table><br>
+    <%}
+    catch(Exception e){
+        out.print(e.getMessage());%><br><%
+    }
+    finally{
+        st.close();
+        con.close();
+    }
+    %>
+
+
+
+
+</f:view>
+</body>
+</html>
+</jsp:root>

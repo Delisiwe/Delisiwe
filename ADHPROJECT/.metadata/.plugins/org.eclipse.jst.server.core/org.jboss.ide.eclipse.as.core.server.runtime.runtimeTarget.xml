@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<classpath>
+  <source-attachment entry="C:/Users/Deli/wildfly-10.0.0.Final/modules/system/layers/base/javax/el/api/main/jboss-el-api_3.0_spec-1.0.5.Final.jar" runtime-id="WildFly 10.x Runtime3" source-attachment-path="/frontend"/>
+</classpath>

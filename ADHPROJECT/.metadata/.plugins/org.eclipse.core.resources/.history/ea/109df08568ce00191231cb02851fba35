@@ -1,0 +1,5 @@
+package com.jsf.jpa.cruds;
+
+public class SchoolEntityManager {
+
+}

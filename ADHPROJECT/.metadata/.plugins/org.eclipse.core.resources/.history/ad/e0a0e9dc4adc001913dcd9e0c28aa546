@@ -1,0 +1,20 @@
+package service;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+
+/**
+ * Session Bean implementation class TransactionEJB
+ */
+@Stateless
+@LocalBean
+public class TransactionEJB {
+
+    /**
+     * Default constructor. 
+     */
+    public TransactionEJB() {
+        // TODO Auto-generated constructor stub
+    }
+
+}

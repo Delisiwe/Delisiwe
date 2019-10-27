@@ -1,0 +1,5 @@
+package com.jsf.jpa.crud.db.operations;
+
+public class DatabaseOperations {
+
+}

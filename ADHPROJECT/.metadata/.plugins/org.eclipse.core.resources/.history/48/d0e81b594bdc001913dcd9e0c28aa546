@@ -1,0 +1,76 @@
+package model;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+@ManagedBean(name ="transaction") 
+@SessionScoped
+
+public class Transaction {
+	
+	
+	private String name;
+	private String SourcePassport;
+	private String DestinationPassport;
+	private String DestinationBank;
+	private String DestinationCountry;
+	private String AccountNumber;
+	private double Amount;
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getSourcePassport() {
+		return SourcePassport;
+	}
+	public void setSourcePassport(String SourcePassport) {
+		this.SourcePassport = SourcePassport;
+	}
+	public String getDestinationPassport() {
+		return DestinationPassport;
+	}
+	public void setDestinationPassport(String DestinationPassport) {
+		this.DestinationPassport = DestinationPassport;
+	}
+	public String getDestinationBank() {
+		return DestinationBank;
+	}
+	public void setDestinationBank(String DestinationBank) {
+		this.DestinationBank = DestinationBank;
+	}
+	public String getDestinationCountry() {
+		return DestinationCountry;
+	}
+	public void setDestinationCountry(String DestinationCountry) {
+		this.DestinationCountry = DestinationCountry;
+	}
+	public String getAccountNumber() {
+		return AccountNumber;
+	}
+	public void setAccountNumber(String AccountNumber) {
+		this.AccountNumber = AccountNumber;
+	}
+	public double getAmount() {
+		return Amount;
+	}
+	public void setAmount(double Amount) {
+		this.Amount = Amount;
+	}
+
+	public TransactionEntity getEntity()
+	{
+		TransactionEntity transactionentity = new TransactionEntity();
+		transactionentity.setName(name);
+		transactionentity.setSourcePassport(SourcePassport);
+		transactionentity.setDestinationPassport(DestinationPassport);
+		transactionentity.setDestinationCountry(DestinationCountry);
+		transactionentity.setAccountNumber(AccountNumber);
+		transactionentity.setAmount(Amount);
+		
+		return transactionentity;
+		
+	}
+}

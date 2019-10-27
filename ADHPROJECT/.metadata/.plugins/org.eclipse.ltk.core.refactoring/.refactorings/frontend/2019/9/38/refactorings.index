@@ -1,0 +1,26 @@
+1568831567531	Delete element
+1568832046940	Delete element
+1568832158301	Delete element
+1568832500469	Delete element
+1568832697907	Delete element
+1568833267131	Encapsulate field 'Name'
+1568833300837	Encapsulate field 'SourcePassport'
+1568833307748	Encapsulate field 'DestinationPassport'
+1568833313095	Encapsulate field 'DestinationBank'
+1568833318012	Encapsulate field 'DestinationCountry'
+1568833323243	Encapsulate field 'AccountNumber'
+1568833333462	Encapsulate field 'Amount'
+1568835757606	Encapsulate field 'transaction'
+1568836277701	Infer generic type arguments
+1568912475216	Encapsulate field 'transaction'
+1568918640649	Delete element
+1569007548525	Encapsulate field 'name'
+1569007561829	Encapsulate field 'SourcePassport'
+1569007568442	Encapsulate field 'DestinationPassport'
+1569007573462	Encapsulate field 'DestinationBank'
+1569007578705	Encapsulate field 'DestinationCountry'
+1569007585547	Encapsulate field 'AccountNumber'
+1569007595961	Encapsulate field 'Amount'
+1569009490074	Delete element
+1569055303950	Delete element
+1569055485878	Delete element

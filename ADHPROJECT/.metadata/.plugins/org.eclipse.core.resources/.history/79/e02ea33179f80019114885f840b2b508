@@ -1,0 +1,47 @@
+package model;
+
+import java.io.Serializable;
+import java.util.Date;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import entities.TweetEntity;
+
+@ManagedBean(name = "employee")
+@SessionScoped
+public class Tweet implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
+	private String tweetbody;
+	private Date timestamp;
+	
+	
+	public String gettweetbody() {
+		return tweetbody;
+	}
+	public void settweetbody(String tweetbody) {
+		this.tweetbody = tweetbody;
+	}
+	
+	
+	public Date gettimestamp() {
+		return timestamp;
+	}
+	public void settimestamp(Date timestamp) {
+		this.timestamp = timestamp;
+	}
+	
+	public TweetEntity getEntity()
+	{
+		TweetEntity tweetEntity = new TweetEntity();
+		tweetEntity.settimestamp(timestamp);
+		tweetEntity.settweetbody(tweetbody);
+		
+		return tweetEntity;
+	}
+	
+	
+	
+
+}

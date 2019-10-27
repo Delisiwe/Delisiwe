@@ -1,0 +1,55 @@
+
+package controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.ejb.EJB;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
+import javax.inject.Named;
+
+import model.Tweet;
+import model.Tweetjava;
+import service.TweetEJB;
+
+@ManagedBean(name = "employeecontroller")
+@SessionScoped
+public class TweetController{
+ 
+    @EJB
+    private Tweetjava tweetEJB;
+    
+  //from form
+  	@ManagedProperty(value="#{tweet}")
+    private Tweetjava tweet;
+  	
+    private List<Tweetjava> tweetList = new ArrayList<>();
+ 
+   public List<Tweetjava> getTweetList() {
+       // tweetList = tweetEJB.findTweets();
+        return tweetList;
+    }
+ 
+   public String viewEmployee(){
+        return "employeeList.xhtml";
+    }
+   
+    public String addNewEmployee() {
+         employeeEJB.addNew(employee.getEntity());
+      //  employeeList = employeeEJB.findEmployees();
+        return "employeeList.xhtml";
+    }
+
+	public Employee getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
+    
+    
+}

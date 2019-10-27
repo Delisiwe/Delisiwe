@@ -1,0 +1,19 @@
+package controller;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.SessionScoped;
+
+import model.Transaction;
+
+@ManagedBean(name="transactioncontroller")
+
+@SessionScoped
+public class TransactionController {
+	
+	@ManagedProperty(value="#{transaction}")
+
+	private Transaction transaction;
+	
+	
+}

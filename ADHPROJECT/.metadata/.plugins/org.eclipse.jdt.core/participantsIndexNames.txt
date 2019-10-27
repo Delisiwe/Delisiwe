@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\Users\Deli\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3965109459.index
+\frontends\src
+C:\Users\Deli\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3996883735.index
+\DeliManagement\src
